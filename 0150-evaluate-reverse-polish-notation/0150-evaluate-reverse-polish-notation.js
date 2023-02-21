@@ -3,7 +3,7 @@
  * @return {number}
  */
 var evalRPN = function(tokens) {
-     if (tokens.length === 1) return parseInt(tokens[0]);
+    if (tokens.length === 1) return parseInt(tokens[0]);
     let result = 0;
     const stack = [];
     const operatorMap = {
@@ -14,17 +14,15 @@ var evalRPN = function(tokens) {
     };
 
     for (const val of tokens) {
-    if (val in operatorMap) {
-      if (stack.length > 1) {
-         const num1 = stack.pop();
-        const num2 = stack.pop();
+        if (val in operatorMap) {
+            const num1 = stack.pop();
+            const num2 = stack.pop();
 
-        result = helperFunction(num1, num2, val);
-        stack.push(result);
-      }
-    } else {
-      stack.push(parseInt(val));
-    }
+            result = helperFunction(num1, num2, val);
+            stack.push(result);
+        } else {
+          stack.push(parseInt(val));
+        }
     }
 
     return parseInt(result);
