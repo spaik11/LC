@@ -21,5 +21,5 @@ var isValid = function(s) {
             stack.push(item);
         }
     }
-    return stack.length === 0 ? true : false;
+    return stack.length === 0;
 };
