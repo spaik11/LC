@@ -11,7 +11,7 @@ var maxArea = function(height) {
     const wallHeight = Math.min(height[right], height[left]);
     largestArea = Math.max(wallHeight * (right - left), largestArea);
 
-    if (height[left] <= height[right]) {
+    if (height[left] < height[right]) {
       left++;
     } else {
       right--;
