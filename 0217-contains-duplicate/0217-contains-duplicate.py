@@ -6,3 +6,5 @@ class Solution:
                 return True
             else:
                 hset.add(num)
+                
+        return False
