@@ -9,11 +9,11 @@ class Solution:
         
         for bracket in s:
             if bracket in bracketDict:
-                if len(stack) > 0 and stack[len(stack) - 1] == bracketDict[bracket]:
+                if len(stack) > 0 and stack[-1] == bracketDict[bracket]:
                     stack.pop()
                 else:
                     return False
             else:
                 stack.append(bracket)
                 
-        return len(stack) == 0
+        return True if not stack else False
