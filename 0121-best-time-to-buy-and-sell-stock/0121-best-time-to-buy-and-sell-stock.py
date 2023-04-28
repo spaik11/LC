@@ -10,5 +10,5 @@ class Solution:
             else:
                 maxProfit = max(currProfit, maxProfit)
             r += 1
-        
+            
         return maxProfit
