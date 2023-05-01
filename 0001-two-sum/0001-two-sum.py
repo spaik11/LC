@@ -6,6 +6,5 @@ class Solution:
             partner = target - nums[i]
             if partner in dict:
                 return [i, dict[partner]]
-
-            dict[nums[i]] = i
             
+            dict[nums[i]] = i
