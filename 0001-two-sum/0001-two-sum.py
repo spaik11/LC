@@ -2,9 +2,9 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         dict = {}
         
-        for i in range(len(nums)):
-            partner = target - nums[i]
+        for i, num in enumerate(nums):
+            partner = target - num
             if partner in dict:
                 return [i, dict[partner]]
             
-            dict[nums[i]] = i
+            dict[num] = i
