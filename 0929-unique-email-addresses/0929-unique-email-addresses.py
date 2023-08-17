@@ -10,10 +10,6 @@ class Solution:
         for e in emails:
             local, domain = e.split("@")
             local = local.split("+")[0].replace(".", "")
-            email = (local, domain)
-            print(email)
-            unique.add(email)
-            
-        print(unique)
+            unique.add((local, domain))
                 
         return len(unique)
