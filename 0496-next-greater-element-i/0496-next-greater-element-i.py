@@ -7,7 +7,6 @@ class Solution:
             if nums2[i] not in nums1Idx:
                 continue
             for j in range(i + 1, len(nums2)):
-                print(nums2[j], nums2[i])
                 if nums2[j] > nums2[i]:
                     idx = nums1Idx[nums2[i]]
                     res[idx] = nums2[j]
